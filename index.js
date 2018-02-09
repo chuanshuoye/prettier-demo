@@ -10,13 +10,16 @@ const prettierConfigPath = require.resolve('./.prettierrc');
 
 // console.log(process.argv);
 
-const mode = process.argv[2] || 'check';
+const formatFilePaths = process.argv[2] || '**/*.js';
+const mode = process.argv[3] || 'check';
 const shouldWrite = mode;
+
+// console.log(shouldWrite);
 
 let didWarn = false;
 let didError = false;
 
-const files = glob.sync('**/*.js', {ignore: '**/node_modules/**'});
+const files = glob.sync(formatFilePaths, {ignore: '**/node_modules/**'});
 
 if (!files.length) {
   return;
