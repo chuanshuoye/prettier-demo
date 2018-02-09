@@ -1,5 +1,9 @@
 const {esNextPaths} = require('./prettier.config');
 
+const esCustomPaths = process.argv[2] || esNextPaths
+
+console.log(esCustomPaths);
+
 module.exports = {
   bracketSpacing: false,
   singleQuote: true,
@@ -9,7 +13,7 @@ module.exports = {
 
   overrides: [
     {
-      files: esNextPaths,
+      files: esCustomPaths,
       options: {
         trailingComma: 'all',
       },

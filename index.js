@@ -8,6 +8,8 @@ const fs = require('fs');
 
 const prettierConfigPath = require.resolve('./.prettierrc');
 
+// console.log(process.argv);
+
 const mode = process.argv[2] || 'check';
 const shouldWrite = mode;
 
