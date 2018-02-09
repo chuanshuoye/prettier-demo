@@ -2,7 +2,7 @@
 
 ## 安装
 
-npm install --save-dev prettier-demo
+npm install --save-dev prettier prettier-demo
 
 ## package.json
 
