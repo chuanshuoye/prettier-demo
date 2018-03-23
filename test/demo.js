@@ -1,4 +1,4 @@
-const a = 123;
+const    a = 123;
 
 function ab() {
   console.log(a);

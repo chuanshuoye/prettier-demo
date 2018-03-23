@@ -8,13 +8,12 @@ const fs = require('fs');
 
 const prettierConfigPath = require.resolve('./.prettierrc');
 
-// console.log(process.argv);
-
 const formatFilePaths = process.argv[2] || '**/*.js';
 const mode = process.argv[3] || 'check';
 const shouldWrite = mode;
 
-// console.log(shouldWrite);
+console.log(process.argv);
+console.log(`prettier file path is ${formatFilePaths}`);
 
 let didWarn = false;
 let didError = false;
